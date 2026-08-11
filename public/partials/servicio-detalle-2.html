@@ -1,0 +1,44 @@
+<div
+  class="rounded-xl border border-navy-800 bg-white shadow-xl ring-1 ring-gold-500/20"
+  x-data="{ abierto: true }"
+  x-init="
+    $nextTick(() => {
+      const io = new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) { $el.classList.add('fade-in'); io.disconnect() }
+      })
+      io.observe($el)
+    })
+  "
+>
+  <div class="px-8 pt-8 pb-6">
+    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-600">Área de práctica</p>
+    <h3 class="mt-2 font-serif text-2xl text-navy-900">Laboral, Mercantil y Corporativo</h3>
+    <p class="mt-4 leading-relaxed text-navy-700">
+      Asesoramos a personas y empresas en derecho laboral, societario y comercial: desde
+      despidos y negociación colectiva hasta constitución de sociedades, fusiones y contratos
+      mercantiles de alto valor.
+    </p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+      <li class="flex items-start gap-2 text-sm text-navy-800">
+        <span class="mt-0.5 text-gold-500">✔</span> Despidos, finiquitos y juicios laborales
+      </li>
+      <li class="flex items-start gap-2 text-sm text-navy-800">
+        <span class="mt-0.5 text-gold-500">✔</span> Constitución de sociedades y actas
+      </li>
+      <li class="flex items-start gap-2 text-sm text-navy-800">
+        <span class="mt-0.5 text-gold-500">✔</span> Contratos mercantiles y due diligence
+      </li>
+      <li class="flex items-start gap-2 text-sm text-navy-800">
+        <span class="mt-0.5 text-gold-500">✔</span> Derecho de familia e inmobiliario
+      </li>
+    </ul>
+    <div class="mt-6 flex items-center justify-between rounded-lg bg-navy-50 px-5 py-4">
+      <p class="text-sm text-navy-700">
+        <span class="font-semibold text-navy-900">¿Tiene un caso?</span> Agende una consulta inicial.
+      </p>
+      <a href="#contacto" class="rounded-md bg-navy-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-navy-700">
+        Consultar
+      </a>
+    </div>
+  </div>
+</div>

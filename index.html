@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOD Abogados — Bufete Jurídico</title>
+  <meta name="description" content="Bufete de abogados con más de 25 años de experiencia en derecho civil, penal, laboral y mercantil." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%2316263a'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23c99f3f' font-family='Georgia'>H</text></svg>" />
+  <link rel="stylesheet" href="/src/input.css" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body
+  class="bg-white font-sans text-navy-900 antialiased"
+  x-data="{ scrolled: false, menu: false }"
+  @scroll.window.passive="scrolled = window.scrollY > 24"
+>
+  <!-- ===== Navbar ===== -->
+  <header
+    class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    :class="scrolled ? 'bg-navy-950/95 shadow-lg backdrop-blur' : 'bg-transparent'"
+  >
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <a href="#" class="flex items-center gap-2" @click="menu = false">
+        <span class="flex h-10 w-10 items-center justify-center rounded-md bg-gold-500 font-serif text-xl font-bold text-navy-950">H</span>
+        <span class="font-serif text-xl font-bold tracking-wide text-white">HOD <span class="text-gold-400">Abogados</span></span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm font-medium text-white/90 md:flex">
+        <a href="#bufete" class="transition hover:text-gold-400">El Bufete</a>
+        <a href="#servicios" class="transition hover:text-gold-400">Servicios</a>
+        <a href="#equipo" class="transition hover:text-gold-400">Equipo</a>
+        <a href="#contacto" class="transition hover:text-gold-400">Contacto</a>
+        <a href="#contacto" class="rounded-md bg-gold-500 px-4 py-2 font-semibold text-navy-950 transition hover:bg-gold-400">
+          Consulta inicial
+        </a>
+      </div>
+
+      <button
+        class="rounded-md p-2 text-white md:hidden"
+        aria-label="Abrir menú"
+        @click="menu = !menu"
+        :aria-expanded="menu"
+      >
+        <svg x-show="!menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg x-show="menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </nav>
+
+    <div
+      class="border-t border-white/10 bg-navy-950/95 px-6 pb-6 backdrop-blur md:hidden"
+      x-show="menu"
+      x-transition
+      @click.outside="menu = false"
+    >
+      <div class="flex flex-col gap-4 py-4 text-sm font-medium text-white/90">
+        <a href="#bufete" @click="menu = false" class="hover:text-gold-400">El Bufete</a>
+        <a href="#servicios" @click="menu = false" class="hover:text-gold-400">Servicios</a>
+        <a href="#equipo" @click="menu = false" class="hover:text-gold-400">Equipo</a>
+        <a href="#contacto" @click="menu = false" class="hover:text-gold-400">Contacto</a>
+        <a href="#contacto" @click="menu = false" class="mt-2 rounded-md bg-gold-500 px-4 py-2 text-center font-semibold text-navy-950">
+          Consulta inicial
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="relative flex min-h-[92vh] items-center overflow-hidden bg-navy-950">
+      <div
+        class="pointer-events-none absolute inset-0 opacity-40"
+        style="background-image: radial-gradient(circle at 20% 20%, rgba(201,159,63,0.25), transparent 45%), radial-gradient(circle at 80% 70%, rgba(46,77,115,0.6), transparent 50%);"
+      ></div>
+      <div class="relative mx-auto max-w-7xl px-6 py-28">
+        <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-gold-500/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-gold-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
+          Bufete jurídico desde 1998
+        </p>
+        <h1 class="max-w-3xl font-serif text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          Defensa rigurosa. <span class="text-gold-400">Resultados claros.</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-navy-100">
+          Asesoría y representación legal con un equipo de más de 30 abogados especializados en
+          derecho civil, penal, laboral y mercantil. La experiencia que su caso merece.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#contacto" class="rounded-md bg-gold-500 px-6 py-3 font-semibold text-navy-950 transition hover:bg-gold-400">
+            Solicitar consulta inicial
+          </a>
+          <a href="#servicios" class="rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:border-gold-400 hover:text-gold-400">
+            Conocer nuestros servicios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section id="servicios" class="bg-navy-50 py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">Qué hacemos</p>
+          <h2 class="mt-3 font-serif text-3xl font-bold text-navy-900 sm:text-4xl">Áreas de práctica</h2>
+          <p class="mt-4 text-navy-700">
+            Seleccione una práctica para conocer más. El detalle se carga bajo demanda con htmx.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Civil -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M9 8h6M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-3-2-2 2-2-2-2 2-2-2-3 2Z" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Derecho Civil</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Contratos, responsabilidad civil, juicios ejecutivos y sucesiones.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- Penal -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Zm-3 9l2 2 4-4" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Derecho Penal</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Defensa estratégica, medidas cautelares y asesoría al imputado.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- Laboral -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 1 9-9v1.5a2.5 2.5 0 0 1-5 0V12a4 4 0 1 0-1.2 2.9M8 12h4m0 0v8" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Derecho Laboral</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Despidos, finiquitos, juicios laborales y negociación colectiva.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle-2.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- Mercantil -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21v-7m4 7V9m4 12V4m4 17v-9" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Derecho Mercantil</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Sociedades, fusiones, contratos comerciales y due diligence.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle-2.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- Familia -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2m8-11a4 4 0 1 0-4 4 4 4 0 0 0 4-4Zm9 11v-2a4 4 0 0 0-3-3.9m-4-9.1a4 4 0 0 1 0 7.8" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Derecho de Familia</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Divorcios, custodia, pensiones y patria potestad.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle-2.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+
+          <!-- Inmobiliario -->
+          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+            <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M10 10h.01M14 10h.01" />
+              </svg>
+            </span>
+            <h3 class="font-serif text-xl font-semibold text-navy-900">Inmobiliario</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+              Compraventas, arrendamientos, hipotecas y litigios inmobiliarios.
+            </p>
+            <button
+              class="mt-6 inline-flex items-center gap-1 self-start text-sm font-semibold text-gold-600 transition hover:gap-2 hover:text-gold-500"
+              hx-get="/partials/servicio-detalle-2.html"
+              hx-target="#panel-detalle"
+              hx-swap="innerHTML show:top"
+            >
+              Ver detalle <span aria-hidden="true">→</span>
+            </button>
+          </article>
+        </div>
+
+        <div id="panel-detalle" class="mt-10" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===== Rendimiento (lazy-load con htmx) ===== -->
+    <section
+      class="bg-navy-950"
+      hx-get="/partials/rendimiento.html"
+      hx-trigger="revealed"
+      hx-swap="innerHTML"
+      aria-live="polite"
+    >
+      <div class="py-16 text-center">
+        <span class="htmx-indicator text-sm text-navy-200">Cargando cifras del despacho…</span>
+      </div>
+    </section>
+
+    <!-- ===== Sobre el bufete ===== -->
+    <section id="bufete" class="bg-white py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2">
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-xl bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950 p-12 shadow-2xl">
+            <div class="flex h-full flex-col items-center justify-center gap-6 text-center">
+              <span class="flex h-24 w-24 items-center justify-center rounded-full bg-gold-500 font-serif text-5xl font-bold text-navy-950">H</span>
+              <p class="font-serif text-2xl text-white">HOD <span class="text-gold-400">Abogados</span></p>
+              <p class="text-sm uppercase tracking-[0.3em] text-navy-200">Desde 1998 · Ciudad de México</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-8 -right-8 hidden rounded-lg bg-gold-500 px-8 py-6 text-center shadow-xl lg:block">
+            <p class="font-serif text-4xl font-bold text-navy-950" x-data="contador(25, '+')" x-text="texto">0</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-navy-900">Años de ejercicio</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">El bufete</p>
+          <h2 class="mt-3 font-serif text-3xl font-bold text-navy-900 sm:text-4xl">
+            Un despacho con alma de litigante
+          </h2>
+          <p class="mt-6 leading-relaxed text-navy-700">
+            Fundado en 1998, HOD Abogados reúne a más de 30 abogados senior que combinan la
+            profundidad académica con la práctica diaria en los tribunales. Cada caso recibe un
+            equipo dedicado y un plan estratégico propio.
+          </p>
+          <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 text-gold-600">✔</span>
+              <span class="text-sm text-navy-800">Equipos multidisciplinarios por caso</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 text-gold-600">✔</span>
+              <span class="text-sm text-navy-800">Honorarios claros desde la primera consulta</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 text-gold-600">✔</span>
+              <span class="text-sm text-navy-800">Comunicación directa con su abogado</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 text-gold-600">✔</span>
+              <span class="text-sm text-navy-800">Cobertura nacional e internacional</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Equipo ===== -->
+    <section id="equipo" class="bg-navy-50 py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-gold-600">Nuestro equipo</p>
+          <h2 class="mt-3 font-serif text-3xl font-bold text-navy-900 sm:text-4xl">Abogados del despacho</h2>
+          <p class="mt-4 text-navy-700">Filtre por área de práctica. La lista se filtra en el navegador con Alpine.js.</p>
+        </div>
+
+        <div
+          class="mt-12"
+          x-data="{
+            areas: ['Todos', 'Civil', 'Penal', 'Laboral', 'Mercantil'],
+            seleccion: 'Todos',
+            abogados: [
+              { nombre: 'Héctor Ortiz Dávila', area: 'Civil', rol: 'Socio fundador', iniciales: 'HO' },
+              { nombre: 'Mónica Rivera Santos', area: 'Penal', rol: 'Socia de litigación', iniciales: 'MR' },
+              { nombre: 'Jorge Andrade Peña', area: 'Laboral', rol: 'Socio de asuntos laborales', iniciales: 'JA' },
+              { nombre: 'Carla Mendoza Ruiz', area: 'Mercantil', rol: 'Socia corporativa', iniciales: 'CM' },
+              { nombre: 'Luis Ferrer Gómez', area: 'Civil', rol: 'Abogado senior', iniciales: 'LF' },
+              { nombre: 'Ana Beltrán Soto', area: 'Penal', rol: 'Abogada senior', iniciales: 'AB' },
+            ],
+            filtrados() {
+              return this.seleccion === 'Todos'
+                ? this.abogados
+                : this.abogados.filter((a) => a.area === this.seleccion)
+            },
+          }"
+        >
+          <div class="flex flex-wrap justify-center gap-3">
+            <template x-for="area in areas" :key="area">
+              <button
+                class="rounded-full px-5 py-2 text-sm font-semibold transition"
+                :class="seleccion === area
+                  ? 'bg-navy-900 text-white shadow-md'
+                  : 'bg-white text-navy-800 ring-1 ring-navy-200 hover:bg-navy-100'"
+                @click="seleccion = area"
+                x-text="area"
+              ></button>
+            </template>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <template x-for="abogado in filtrados()" :key="abogado.nombre">
+              <article
+                class="rounded-xl bg-white p-8 text-center shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg"
+                x-show="true"
+                x-transition.opacity.duration.300ms
+              >
+                <div
+                  class="mx-auto flex h-20 w-20 items-center justify-center rounded-full font-serif text-2xl font-bold text-white shadow-lg"
+                  :class="seleccion === 'Todos' || seleccion === abogado.area
+                    ? 'bg-gradient-to-br from-navy-600 to-navy-900 ring-2 ring-gold-500'
+                    : 'bg-navy-300'"
+                  x-text="abogado.iniciales"
+                ></div>
+                <h3 class="mt-5 font-serif text-lg font-semibold text-navy-900" x-text="abogado.nombre"></h3>
+                <p class="mt-1 text-sm text-navy-700" x-text="abogado.rol"></p>
+                <span class="mt-3 inline-block rounded-full bg-gold-500/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-gold-700" x-text="abogado.area"></span>
+              </article>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA final ===== -->
+    <section class="relative overflow-hidden bg-navy-950 py-24">
+      <div
+        class="pointer-events-none absolute inset-0 opacity-30"
+        style="background-image: radial-gradient(circle at 70% 30%, rgba(201,159,63,0.3), transparent 50%);"
+      ></div>
+      <div class="relative mx-auto max-w-3xl px-6 text-center">
+        <h2 class="font-serif text-3xl font-bold text-white sm:text-4xl">
+          Su caso merece una defensa seria
+        </h2>
+        <p class="mt-5 text-lg text-navy-100">
+          Agende una consulta inicial y reciba una evaluación honesta de su situación legal.
+        </p>
+        <a href="#contacto" class="mt-9 inline-block rounded-md bg-gold-500 px-8 py-4 font-semibold text-navy-950 transition hover:bg-gold-400">
+          Agendar consulta
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer / Contacto ===== -->
+  <footer id="contacto" class="bg-navy-950 pb-10 pt-20 text-white">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid gap-12 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="flex h-10 w-10 items-center justify-center rounded-md bg-gold-500 font-serif text-xl font-bold text-navy-950">H</span>
+            <span class="font-serif text-xl font-bold">HOD <span class="text-gold-400">Abogados</span></span>
+          </div>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-navy-200">
+            Bufete jurídico con más de 25 años de experiencia. Defensa rigurosa y resultados claros.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-gold-400">Contacto</h3>
+          <ul class="mt-5 space-y-3 text-sm text-navy-200">
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">✆</span> <a href="tel:+525512345678" class="hover:text-white">+52 55 1234 5678</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">✉</span> <a href="mailto:contacto@hodabogados.mx" class="hover:text-white">contacto@hodabogados.mx</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">⚖</span> Av. Paseo de la Reforma 250, Piso 12, Ciudad de México
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-serif text-lg font-semibold text-gold-400">Horario</h3>
+          <ul class="mt-5 space-y-3 text-sm text-navy-200">
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">■</span> Lun – Vie · 9:00 a 18:00
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">■</span> Sábado · 10:00 a 14:00
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-gold-400">■</span> Urgencias penales · 24/7
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-14 border-t border-white/10 pt-6 text-center text-xs text-navy-300">
+        © <span x-text="new Date().getFullYear()"></span> HOD Abogados · Landing de ejemplo con Alpine.js, htmx y Tailwind CSS.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
