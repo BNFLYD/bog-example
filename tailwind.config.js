@@ -28,6 +28,7 @@ export default {
           600: '#a9802c',
           700: '#85631f',
         },
+        beige: '#c5bfae',
       },
     },
   },

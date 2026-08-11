@@ -11,7 +11,7 @@
 </head>
 
 <body
-  class="bg-white font-sans text-navy-900 antialiased"
+  class="bg-beige font-sans text-navy-900 antialiased"
   x-data="{ scrolled: false, menu: false }"
   @scroll.window.passive="scrolled = window.scrollY > 24"
 >
@@ -23,10 +23,10 @@
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <a href="#" class="flex items-center gap-2" @click="menu = false">
         <span class="flex h-10 w-10 items-center justify-center rounded-md bg-gold-500 font-serif text-xl font-bold text-navy-950">H</span>
-        <span class="font-serif text-xl font-bold tracking-wide text-white">HOD <span class="text-gold-400">Abogados</span></span>
+        <span class="font-serif text-xl font-bold tracking-wide text-beige">HOD <span class="text-gold-400">Abogados</span></span>
       </a>
 
-      <div class="hidden items-center gap-8 text-sm font-medium text-white/90 md:flex">
+      <div class="hidden items-center gap-8 text-sm font-medium text-beige/90 md:flex">
         <a href="#bufete" class="transition hover:text-gold-400">El Bufete</a>
         <a href="#servicios" class="transition hover:text-gold-400">Servicios</a>
         <a href="#equipo" class="transition hover:text-gold-400">Equipo</a>
@@ -37,7 +37,7 @@
       </div>
 
       <button
-        class="rounded-md p-2 text-white md:hidden"
+        class="rounded-md p-2 text-beige md:hidden"
         aria-label="Abrir menú"
         @click="menu = !menu"
         :aria-expanded="menu"
@@ -52,12 +52,12 @@
     </nav>
 
     <div
-      class="border-t border-white/10 bg-navy-950/95 px-6 pb-6 backdrop-blur md:hidden"
+      class="border-t border-beige/10 bg-navy-950/95 px-6 pb-6 backdrop-blur md:hidden"
       x-show="menu"
       x-transition
       @click.outside="menu = false"
     >
-      <div class="flex flex-col gap-4 py-4 text-sm font-medium text-white/90">
+      <div class="flex flex-col gap-4 py-4 text-sm font-medium text-beige/90">
         <a href="#bufete" @click="menu = false" class="hover:text-gold-400">El Bufete</a>
         <a href="#servicios" @click="menu = false" class="hover:text-gold-400">Servicios</a>
         <a href="#equipo" @click="menu = false" class="hover:text-gold-400">Equipo</a>
@@ -81,7 +81,7 @@
           <span class="h-1.5 w-1.5 rounded-full bg-gold-400"></span>
           Bufete jurídico desde 1998
         </p>
-        <h1 class="max-w-3xl font-serif text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 class="max-w-3xl font-serif text-4xl font-bold leading-tight text-beige sm:text-5xl lg:text-6xl">
           Defensa rigurosa. <span class="text-gold-400">Resultados claros.</span>
         </h1>
         <p class="mt-6 max-w-2xl text-lg leading-relaxed text-navy-100">
@@ -92,7 +92,7 @@
           <a href="#contacto" class="rounded-md bg-gold-500 px-6 py-3 font-semibold text-navy-950 transition hover:bg-gold-400">
             Solicitar consulta inicial
           </a>
-          <a href="#servicios" class="rounded-md border border-white/30 px-6 py-3 font-semibold text-white transition hover:border-gold-400 hover:text-gold-400">
+          <a href="#servicios" class="rounded-md border border-beige/30 px-6 py-3 font-semibold text-beige transition hover:border-gold-400 hover:text-gold-400">
             Conocer nuestros servicios
           </a>
         </div>
@@ -112,7 +112,7 @@
 
         <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Civil -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M9 8h6M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16l-3-2-2 2-2-2-2 2-2-2-3 2Z" />
@@ -133,7 +133,7 @@
           </article>
 
           <!-- Penal -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Zm-3 9l2 2 4-4" />
@@ -154,7 +154,7 @@
           </article>
 
           <!-- Laboral -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 1 9-9v1.5a2.5 2.5 0 0 1-5 0V12a4 4 0 1 0-1.2 2.9M8 12h4m0 0v8" />
@@ -175,7 +175,7 @@
           </article>
 
           <!-- Mercantil -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21v-7m4 7V9m4 12V4m4 17v-9" />
@@ -196,7 +196,7 @@
           </article>
 
           <!-- Familia -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2m8-11a4 4 0 1 0-4 4 4 4 0 0 0 4-4Zm9 11v-2a4 4 0 0 0-3-3.9m-4-9.1a4 4 0 0 1 0 7.8" />
@@ -217,7 +217,7 @@
           </article>
 
           <!-- Inmobiliario -->
-          <article class="group flex flex-col rounded-xl bg-white p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
+          <article class="group flex flex-col rounded-xl bg-beige p-8 shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg">
             <span class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy-900 text-gold-400">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M10 10h.01M14 10h.01" />
@@ -256,13 +256,13 @@
     </section>
 
     <!-- ===== Sobre el bufete ===== -->
-    <section id="bufete" class="bg-white py-24">
+    <section id="bufete" class="bg-beige py-24">
       <div class="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2">
         <div class="relative">
           <div class="aspect-[4/3] rounded-xl bg-gradient-to-br from-navy-800 via-navy-900 to-navy-950 p-12 shadow-2xl">
             <div class="flex h-full flex-col items-center justify-center gap-6 text-center">
               <span class="flex h-24 w-24 items-center justify-center rounded-full bg-gold-500 font-serif text-5xl font-bold text-navy-950">H</span>
-              <p class="font-serif text-2xl text-white">HOD <span class="text-gold-400">Abogados</span></p>
+              <p class="font-serif text-2xl text-beige">HOD <span class="text-gold-400">Abogados</span></p>
               <p class="text-sm uppercase tracking-[0.3em] text-navy-200">Desde 1998 · Ciudad de México</p>
             </div>
           </div>
@@ -338,8 +338,8 @@
               <button
                 class="rounded-full px-5 py-2 text-sm font-semibold transition"
                 :class="seleccion === area
-                  ? 'bg-navy-900 text-white shadow-md'
-                  : 'bg-white text-navy-800 ring-1 ring-navy-200 hover:bg-navy-100'"
+                  ? 'bg-navy-900 text-beige shadow-md'
+                  : 'bg-beige text-navy-800 ring-1 ring-navy-200 hover:bg-navy-100'"
                 @click="seleccion = area"
                 x-text="area"
               ></button>
@@ -349,12 +349,12 @@
           <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <template x-for="abogado in filtrados()" :key="abogado.nombre">
               <article
-                class="rounded-xl bg-white p-8 text-center shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg"
+                class="rounded-xl bg-beige p-8 text-center shadow-sm ring-1 ring-navy-100 transition hover:-translate-y-1 hover:shadow-lg"
                 x-show="true"
                 x-transition.opacity.duration.300ms
               >
                 <div
-                  class="mx-auto flex h-20 w-20 items-center justify-center rounded-full font-serif text-2xl font-bold text-white shadow-lg"
+                  class="mx-auto flex h-20 w-20 items-center justify-center rounded-full font-serif text-2xl font-bold text-beige shadow-lg"
                   :class="seleccion === 'Todos' || seleccion === abogado.area
                     ? 'bg-gradient-to-br from-navy-600 to-navy-900 ring-2 ring-gold-500'
                     : 'bg-navy-300'"
@@ -377,7 +377,7 @@
         style="background-image: radial-gradient(circle at 70% 30%, rgba(201,159,63,0.3), transparent 50%);"
       ></div>
       <div class="relative mx-auto max-w-3xl px-6 text-center">
-        <h2 class="font-serif text-3xl font-bold text-white sm:text-4xl">
+        <h2 class="font-serif text-3xl font-bold text-beige sm:text-4xl">
           Su caso merece una defensa seria
         </h2>
         <p class="mt-5 text-lg text-navy-100">
@@ -391,7 +391,7 @@
   </main>
 
   <!-- ===== Footer / Contacto ===== -->
-  <footer id="contacto" class="bg-navy-950 pb-10 pt-20 text-white">
+  <footer id="contacto" class="bg-navy-950 pb-10 pt-20 text-beige">
     <div class="mx-auto max-w-7xl px-6">
       <div class="grid gap-12 md:grid-cols-3">
         <div>
@@ -408,10 +408,10 @@
           <h3 class="font-serif text-lg font-semibold text-gold-400">Contacto</h3>
           <ul class="mt-5 space-y-3 text-sm text-navy-200">
             <li class="flex items-center gap-3">
-              <span class="text-gold-400">✆</span> <a href="tel:+525512345678" class="hover:text-white">+52 55 1234 5678</a>
+              <span class="text-gold-400">✆</span> <a href="tel:+525512345678" class="hover:text-beige">+52 55 1234 5678</a>
             </li>
             <li class="flex items-center gap-3">
-              <span class="text-gold-400">✉</span> <a href="mailto:contacto@hodabogados.mx" class="hover:text-white">contacto@hodabogados.mx</a>
+              <span class="text-gold-400">✉</span> <a href="mailto:contacto@hodabogados.mx" class="hover:text-beige">contacto@hodabogados.mx</a>
             </li>
             <li class="flex items-center gap-3">
               <span class="text-gold-400">⚖</span> Av. Paseo de la Reforma 250, Piso 12, Ciudad de México
@@ -435,7 +435,7 @@
         </div>
       </div>
 
-      <div class="mt-14 border-t border-white/10 pt-6 text-center text-xs text-navy-300">
+      <div class="mt-14 border-t border-beige/10 pt-6 text-center text-xs text-navy-300">
         © <span x-text="new Date().getFullYear()"></span> HOD Abogados · Landing de ejemplo con Alpine.js, htmx y Tailwind CSS.
       </div>
     </div>
