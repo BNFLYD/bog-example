@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         serif: ['Georgia', 'Times New Roman', 'serif'],
-        sans: ['"Helvetica Neue"', 'Arial', 'sans-serif'],
+        sans: ['"Red Hat Display"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
       colors: {
         navy: {

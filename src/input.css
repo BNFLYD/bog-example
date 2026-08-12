@@ -6,7 +6,7 @@
 
 @theme {
   --font-serif: "Georgia", "Times New Roman", serif;
-  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Red Hat Display", "Helvetica Neue", Arial, sans-serif;
 }
 
 @layer utilities {
